@@ -17,15 +17,24 @@ It aims to be a seamless experience from browsing the products to making secure 
 ## Key Features to Be Implemented:
 
 User Management: Features like secure sign-up, login, and management of user accounts.
+
 Product Catalog: Display of products with details description, images, and price.
+
 Shopping Cart: Add/Remove/Modify items in the cart.
+
 Checkout Process: Ensuring secure payment and order placement.
-Tech Stack:
+
+##Tech Stack:
+
 Front-end: React.js to make a responsive and dynamic interface.
+
 Back-end: Node.js with Express.js to handle the server-side functions.
+
 Database: MongoDB in order to take care of user and product databases.
+
 Authentication: JSON Web Tokens (JWT) for secured login sessions of a user.
-Project Goals:
+
+## Project Goals:
 
 Creating a fully-stacked web application, industry level compliant
 scalable, easy to maintain as well as visually clean UI and UX.
