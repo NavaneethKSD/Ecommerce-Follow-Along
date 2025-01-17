@@ -4,38 +4,55 @@
 
 This project will develop an all-inclusive and interactive ecommerce platform. Users can browse products, manage their shopping carts, and complete purchases seamlessly. The platform focuses on user-friendliness, scalability, and secure operations to ensure a smooth online shopping experience.
 
-##Milestone 1: Project Overview
+## Milestone 1: Project Overview
 
-Session Summary
+### Session Summary
 
 During the first session, the following key aspects of the project were covered:
 
-## Project Purpose:
+### Project Purpose:
 
-It aims to be a seamless experience from browsing the products to making secure checkout on the ecommerce platform.
+It aims to provide a seamless experience from browsing products to making secure checkouts on the ecommerce platform.
 
-## Key Features to Be Implemented:
+### Key Features to Be Implemented:
 
-User Management: Features like secure sign-up, login, and management of user accounts.
+- **User Management:** Features like secure sign-up, login, and management of user accounts.
+- **Product Catalog:** Display of products with detailed descriptions, images, and prices.
+- **Shopping Cart:** Add/Remove/Modify items in the cart.
+- **Checkout Process:** Ensuring secure payment and order placement.
 
-Product Catalog: Display of products with details description, images, and price.
+### Tech Stack:
 
-Shopping Cart: Add/Remove/Modify items in the cart.
+- **Front-end:** React.js to create a responsive and dynamic interface.
+- **Back-end:** Node.js with Express.js to handle the server-side functions.
+- **Database:** MongoDB to manage user and product data.
+- **Authentication:** JSON Web Tokens (JWT) for secured login sessions.
 
-Checkout Process: Ensuring secure payment and order placement.
+### Project Goals:
 
-##Tech Stack:
+Creating a fully-stacked web application that is industry-level compliant, scalable, easy to maintain, and features a visually clean UI and UX. This session provides the foundation for the building process, focusing on the vision and project goals alongside their technological needs.
 
-Front-end: React.js to make a responsive and dynamic interface.
+---
 
-Back-end: Node.js with Express.js to handle the server-side functions.
+## Milestone 2: Project Setup and Login Page Development
 
-Database: MongoDB in order to take care of user and product databases.
+With Milestone 1 completed, Milestone 2 focused on structuring the project, setting up the frontend and backend, and building the login page for the application. The following tasks were completed during this milestone:
 
-Authentication: JSON Web Tokens (JWT) for secured login sessions of a user.
+### Accomplishments 🎯
 
-## Project Goals:
+- **Project Folder Structure:** Organized the project files into separate frontend and backend directories for better maintainability.
+- **React Frontend Setup:** Initialized a React application to serve as the user interface of the platform.
+- **Node.js Backend Setup:** Set up a Node.js server to handle server-side functionality and prepare for API integration in future milestones.
+- **Tailwind CSS Configuration:** Integrated and configured Tailwind CSS for modern, responsive, and utility-based styling.
+- **Login Page Development:** Built a fully functional and styled login page for the frontend. The page allows users to securely log in to their accounts.
 
-Creating a fully-stacked web application, industry level compliant
-scalable, easy to maintain as well as visually clean UI and UX.
-This session provides foundation to the building process focusing the vision and project goals with their technological needs.
+### Repository Updates
+
+The code has been pushed to the GitHub repository created in Milestone 1. The repository now includes:
+
+1. **Separate folders** for frontend and backend.
+2. **A functional Login Page** in the frontend with proper styling using Tailwind CSS.
+3. An updated README file summarizing the progress made during Milestone 2.
+
+The project is progressing as planned, with a solid foundation and the first user-facing feature completed.
+
