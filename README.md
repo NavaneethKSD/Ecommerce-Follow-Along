@@ -38,7 +38,7 @@ Creating a fully-stacked web application that is industry-level compliant, scala
 
 With Milestone 1 completed, Milestone 2 focused on structuring the project, setting up the frontend and backend, and building the login page for the application. The following tasks were completed during this milestone:
 
-### Accomplishments 🎯
+### Accomplishments 
 
 - **Project Folder Structure:** Organized the project files into separate frontend and backend directories for better maintainability.
 - **React Frontend Setup:** Initialized a React application to serve as the user interface of the platform.
@@ -54,5 +54,46 @@ The code has been pushed to the GitHub repository created in Milestone 1. The re
 2. **A functional Login Page** in the frontend with proper styling using Tailwind CSS.
 3. An updated README file summarizing the progress made during Milestone 2.
 
-The project is progressing as planned, with a solid foundation and the first user-facing feature completed.
+
+
+## Milestone 3: Backend Setup  
+
+In this milestone, I worked on setting up the backend for the e-commerce project. The goal was to make sure the backend is organized, connected to a database, and ready to handle errors smoothly.  
+
+### What I Did  
+
+- **Backend Folder Structure:**  
+  - I created folders like `routes`, `controllers`, `models`, and `middlewares`. This helps keep the backend code neat and easy to manage.  
+
+- **Set Up the Server:**  
+  - I used Node.js and Express.js to create a basic server. The server listens for API requests and will handle them in future milestones.  
+
+- **Connected to MongoDB:**  
+  - I used Mongoose to connect the project to a MongoDB database. This is where all the data, like users and products, will be stored.  
+
+- **Added Error Handling:**  
+  - I wrote some basic code to handle errors. This means if something goes wrong, I’ll get a clear message about what happened.  
+
+### Tools I Used  
+
+- **Express.js:** To create routes and handle API requests.  
+- **Mongoose:** To connect and interact with MongoDB.  
+- **Nodemon:** To automatically restart the server when I make changes.  
+- **Dotenv:** To keep important data like the database link safe in a `.env` file.  
+
+### Updates to the Repository  
+
+- The backend now has:  
+  - A proper folder structure.  
+  - A `server.js` file to start the backend.  
+  - A connection to MongoDB.  
+  - Basic error-handling middleware.  
+
+### What’s Next  
+
+Now that the backend is ready, the next steps will include adding routes, APIs, and connecting the frontend to the backend. This milestone was an important step because it sets up the foundation for the rest of the backend features.  
+
+---  
+
+Let me know if this version feels more aligned with what you want!
 
