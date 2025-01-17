@@ -89,11 +89,5 @@ In this milestone, I worked on setting up the backend for the e-commerce project
   - A connection to MongoDB.  
   - Basic error-handling middleware.  
 
-### What’s Next  
 
-Now that the backend is ready, the next steps will include adding routes, APIs, and connecting the frontend to the backend. This milestone was an important step because it sets up the foundation for the rest of the backend features.  
-
----  
-
-Let me know if this version feels more aligned with what you want!
 
