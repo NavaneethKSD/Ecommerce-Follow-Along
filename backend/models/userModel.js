@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const bcrypt = require('bcrypt');
 
 const userSchema = new mongoose.Schema({
     name: {
@@ -16,37 +17,21 @@ const userSchema = new mongoose.Schema({
     password: {
         type: String,
         required: [true, "Please enter your password"],
-        minLength: [4, "Password should be greater than 4 characters"],
+        minLength: [8, "Password should be at least 8 characters long"],
         select: false,
-        validate: {
-            validator: validatePassword, 
-            message:'Password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, one number and one special character'
-        }
     },
     phone: {
         type: Number
     },
     address: [
         {
-            country: {
-                type: String,
-            },
-            city:{
-                type: String,
-            },
-            address1:{
-                type: String,
-            },
-            address2:{
-                type: String,
-            },
-            zipCode:{
-                type: Number,
-            },
-            addressType:{
-                type: String,
-            },
-    }
+            country: String,
+            city: String,
+            address1: String,
+            address2: String,
+            zipCode: Number,
+            addressType: String,
+        }
     ],
     role: {
         type: String,
@@ -55,19 +40,20 @@ const userSchema = new mongoose.Schema({
     avatar: {
         public_id: {
             type: String,
-            required: true,
+            required: false,
         },
         url: {
             type: String,
-            required: true,
+            required: false,
         },
     },
-
-    
 });
 
-function validatePassword(password) {
-    return password.length >= 8 && /[A-Z]/.test(password) && /[a-z]/.test(password) && /[0-9]/.test(password) && /[!@#$%^&*<>,.:;"']/.test(password);
-}
+// Hash password before saving
+userSchema.pre("save", async function(next) {
+    if (!this.isModified("password")) return next();
+    this.password = await bcrypt.hash(this.password, 10);
+    next();
+});
 
 module.exports = mongoose.model('User', userSchema);

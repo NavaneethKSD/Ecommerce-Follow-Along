@@ -174,4 +174,31 @@ In this milestone, the **Sign-Up Page** was created for new users to register an
 - Updated `App.jsx` to include routing for the Sign-Up Page.
 - Updated `README.md` with Milestone 5 details.
 
+Here’s your **Milestone 6 README** in the same style as your friend’s:  
+
+---
+
+## **Milestone 6: Backend Endpoint for Secure Signup **  
+
+### **Overview**  
+In this milestone, we implemented a **secure backend endpoint** for the Signup page. This included encrypting passwords and safely storing user data in the database to enhance security.  
+
+### **Features Implemented**  
+
+1. **Password Encryption**:  
+   - Used `bcrypt` to hash user passwords before saving them.  
+   - Ensured that only the **hashed password** is stored in the database, protecting user credentials from potential breaches.  
+
+2. **User Data Storage**:  
+   - Designed a schema to store user information, including:  
+     - Name  
+     - Email  
+     - Password (hashed)  
+     - Avatar (profile image)  
+   - Implemented validation and error handling to prevent duplicate accounts and incorrect data entry.  
+
+### **How It Works**  
+1. Users submit their **name, email, and password** through the Signup form.  
+2. The backend API hashes the password using `bcrypt`.  
+3. The hashed password, along with other user details, is **stored securely** in the MongoDB database.  
 
