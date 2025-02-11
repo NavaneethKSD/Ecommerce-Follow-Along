@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"; // Import Link
 
 const LoginPage = () => {
   return (
@@ -51,10 +52,10 @@ const LoginPage = () => {
         </form>
 
         <p className="text-sm text-gray-400 text-center mt-6">
-          Don’t have an account?{' '}
-          <a href="#" className="text-gray-200 hover:underline">
+          Don’t have an account?{" "}
+          <Link to="/signup" className="text-gray-200 hover:underline">
             Sign up
-          </a>
+          </Link>
         </p>
       </div>
     </div>

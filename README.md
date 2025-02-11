@@ -155,5 +155,23 @@ In Milestone 4, the focus was on enhancing the backend functionality for user ma
   - **Multer:** Integrated configuration for handling file uploads.
   
 
+## Milestone 5: Sign-Up Page and Form Validation
+
+### Overview
+In this milestone, the **Sign-Up Page** was created for new users to register an account. It includes form validation to ensure valid user input before submission.
+
+### Features Implemented
+- **Sign-Up Page UI:** A clean and responsive sign-up page built with React.js and Tailwind CSS.
+- **Form Fields:** Users enter their name, email, and password.
+- **Validation Logic:** 
+  - Ensures email contains '@'.
+  - Password must be at least 6 characters long.
+  - Name field cannot be empty.
+- **Routing:** The `/signup` route was added to navigate to the Sign-Up Page.
+
+### Repository Updates
+- Added `SignUpPage.jsx` to `src/components/`.
+- Updated `App.jsx` to include routing for the Sign-Up Page.
+- Updated `README.md` with Milestone 5 details.
 
 
