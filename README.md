@@ -202,3 +202,42 @@ In this milestone, we implemented a **secure backend endpoint** for the Signup p
 2. The backend API hashes the password using `bcrypt`.  
 3. The hashed password, along with other user details, is **stored securely** in the MongoDB database.  
 
+Here’s your **Milestone 7 README** in the same style as the previous milestones:  
+
+---
+
+## **Milestone 7: Backend Endpoint for User Login 🔑**  
+
+### **Overview**  
+In this milestone, we implemented a **secure login authentication system** in the backend. This ensures that only users with valid credentials can access their accounts by verifying their encrypted passwords.  
+
+### **Features Implemented**  
+
+1. **User Authentication**:  
+   - Created a **login endpoint** to handle user authentication.  
+   - Validates user credentials (email and password) before granting access.  
+
+2. **Password Verification**:  
+   - Used `bcrypt` to **compare the entered password** with the hashed password stored in the database.  
+   - If passwords match, authentication is successful; otherwise, an error is returned.  
+
+3. **Error Handling & Security**:  
+   - Returns an error message if the user does not exist.  
+   - Ensures passwords are never stored in plain text, following security best practices.  
+
+### **Technologies Used**  
+- **Node.js** for backend logic.  
+- **Express.js** for handling API requests.  
+- **bcrypt** for secure password comparison.  
+- **MongoDB** to store user credentials.  
+
+### **How It Works**  
+1. **User Enters Credentials**: The user provides their **email and password** on the login page.  
+2. **Fetch User Data**: The backend retrieves the **user record** from the database using the provided email.  
+   - If the user is not found, an error is returned: **"User does not exist."**  
+3. **Compare Encrypted Passwords**:  
+   - The backend **hashes the entered password** using `bcrypt`.  
+   - The hashed password is **compared** to the stored password in the database.  
+   - If they match, the user is authenticated; otherwise, an error is sent.  
+
+---
