@@ -241,3 +241,37 @@ In this milestone, we implemented a **secure login authentication system** in th
    - If they match, the user is authenticated; otherwise, an error is sent.  
 
 ---
+
+Here's a `README.md` text for Milestone 8 that you can use:  
+
+---
+
+# 🛍️ Milestone 8: Product Card Component & Homepage  
+
+##  Overview  
+In this milestone, I created a **reusable product card component** and designed a **homepage** to display multiple product cards dynamically.  
+
+##  Features Implemented  
+ **Reusable Product Card Component**: Displays product details like name, image, and price.  
+ **Dynamic Rendering**: Uses `.map()` to render multiple products from an array.  
+ **Styled Layout**: Organized product cards using **Flexbox/Grid** for a clean UI.  
+ **Routing**: Added a route `/home` to display the products page.  
+
+## 📁 Project Structure  
+```
+frontend/
+│-- src/
+│   ├── components/
+│   │   ├── LoginPage.jsx
+│   │   ├── SignUpPage.jsx
+│   │   ├── ProductCard.jsx  <-- (New Product Card Component)
+│   │   ├── HomePage.jsx     <-- (New Homepage Component)
+│   ├── App.jsx
+│   ├── index.css
+│-- package.json
+│-- README.md
+```
+
+3️⃣ **Open in Browser**  
+Visit: [http://localhost:5173/home](http://localhost:5173/home)  
+
