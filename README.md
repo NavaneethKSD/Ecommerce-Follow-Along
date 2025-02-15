@@ -4,7 +4,7 @@
 
 This project will develop an all-inclusive and interactive ecommerce platform. Users can browse products, manage their shopping carts, and complete purchases seamlessly. The platform focuses on user-friendliness, scalability, and secure operations to ensure a smooth online shopping experience.
 
-## Milestone 1: Project Overview
+# Milestone 1: Project Overview
 
 ### Session Summary
 
@@ -34,7 +34,7 @@ Creating a fully-stacked web application that is industry-level compliant, scala
 
 ---
 
-## Milestone 2: Project Setup and Login Page Development
+# Milestone 2: Project Setup and Login Page Development
 
 With Milestone 1 completed, Milestone 2 focused on structuring the project, setting up the frontend and backend, and building the login page for the application. The following tasks were completed during this milestone:
 
@@ -56,7 +56,7 @@ The code has been pushed to the GitHub repository created in Milestone 1. The re
 
 
 
-## Milestone 3: Backend Setup  
+# Milestone 3: Backend Setup  
 
 In this milestone, I worked on setting up the backend for the e-commerce project. The goal was to make sure the backend is organized, connected to a database, and ready to handle errors smoothly.  
 
@@ -155,7 +155,7 @@ In Milestone 4, the focus was on enhancing the backend functionality for user ma
   - **Multer:** Integrated configuration for handling file uploads.
   
 
-## Milestone 5: Sign-Up Page and Form Validation
+# Milestone 5: Sign-Up Page and Form Validation
 
 ### Overview
 In this milestone, the **Sign-Up Page** was created for new users to register an account. It includes form validation to ensure valid user input before submission.
@@ -178,7 +178,7 @@ Here’s your **Milestone 6 README** in the same style as your friend’s:
 
 ---
 
-## **Milestone 6: Backend Endpoint for Secure Signup **  
+# **Milestone 6: Backend Endpoint for Secure Signup **  
 
 ### **Overview**  
 In this milestone, we implemented a **secure backend endpoint** for the Signup page. This included encrypting passwords and safely storing user data in the database to enhance security.  
@@ -206,7 +206,7 @@ Here’s your **Milestone 7 README** in the same style as the previous milestone
 
 ---
 
-## **Milestone 7: Backend Endpoint for User Login 🔑**  
+# **Milestone 7: Backend Endpoint for User Login 🔑**  
 
 ### **Overview**  
 In this milestone, we implemented a **secure login authentication system** in the backend. This ensures that only users with valid credentials can access their accounts by verifying their encrypted passwords.  
@@ -274,4 +274,36 @@ frontend/
 
 3️⃣ **Open in Browser**  
 Visit: [http://localhost:5173/home](http://localhost:5173/home)  
+
+# Milestone 9 - Product Input Form 🎯
+
+## Overview 📌
+In this milestone, we created a frontend form to take product input dynamically. The form allows users to enter product details, including multiple images, and displays them instantly on the homepage.  
+
+This feature ensures products can be added dynamically without modifying the code manually.
+
+## Features 
+- **Product Input Form**: Users can enter product details (name, price, image URL).
+- **Real-time Updates**: Products are added dynamically to the homepage.
+- **State Management**: Used React `useState` to manage product data.
+
+## How It Works 
+1. Users enter product details in the form.
+2. Clicking "Add Product" updates the product list dynamically.
+3. The new product appears instantly on the homepage.
+
+## Folder Structure 📁
+
+frontend/
+│-- src/
+│   ├── components/
+│   │   ├── LoginPage.jsx
+│   │   ├── SignUpPage.jsx
+│   │   ├── ProductCard.jsx
+│   │   ├── HomePage.jsx
+│   │   ├── ProductForm.jsx  <-- (New Product Input Form Component)
+│   ├── App.jsx
+│   ├── index.css
+│-- package.json
+│-- README.md
 
