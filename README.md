@@ -89,7 +89,6 @@ In this milestone, I worked on setting up the backend for the e-commerce project
   - A connection to MongoDB.  
   - Basic error-handling middleware.  
 
-Below is a sample README text for Milestone 4, detailing the work done for user management and file upload integration:
 
 ---
 
@@ -173,8 +172,7 @@ In this milestone, the **Sign-Up Page** was created for new users to register an
 - Added `SignUpPage.jsx` to `src/components/`.
 - Updated `App.jsx` to include routing for the Sign-Up Page.
 - Updated `README.md` with Milestone 5 details.
-
-Here’s your **Milestone 6 README** in the same style as your friend’s:  
+ 
 
 ---
 
@@ -202,7 +200,6 @@ In this milestone, we implemented a **secure backend endpoint** for the Signup p
 2. The backend API hashes the password using `bcrypt`.  
 3. The hashed password, along with other user details, is **stored securely** in the MongoDB database.  
 
-Here’s your **Milestone 7 README** in the same style as the previous milestones:  
 
 ---
 
@@ -242,9 +239,6 @@ In this milestone, we implemented a **secure login authentication system** in th
 
 ---
 
-Here's a `README.md` text for Milestone 8 that you can use:  
-
----
 
 # 🛍️ Milestone 8: Product Card Component & Homepage  
 
@@ -306,4 +300,64 @@ frontend/
 │   ├── index.css
 │-- package.json
 │-- README.md
+
+
+# **Milestone 10: Backend Endpoint for Product Storage 🛒**  
+
+### **Overview**  
+In this milestone, we implemented a **Mongoose schema** for products and created a **backend API endpoint** to store product details securely in MongoDB. This ensures structured data storage and validation for product entries.  
+
+---
+
+### **Features Implemented**  
+
+1. **Product Schema (Mongoose Model)**  
+   - Defined a **schema for product data** with proper validation.  
+   - Fields include **name, description, price, images, and createdAt timestamp**.  
+
+2. **Backend API Endpoint**  
+   - Created a **POST API endpoint** to accept product details and store them in MongoDB.  
+   - Ensured **proper validation** before saving product data.  
+
+3. **Data Validation & Security**  
+   - Enforced required fields (e.g., name, description, price) to maintain data integrity.  
+   - Sanitized input data to prevent injection attacks.  
+
+---
+
+### **Technologies Used**  
+- **Node.js** for backend logic.  
+- **Express.js** for API development.  
+- **Mongoose** to interact with MongoDB.  
+- **MongoDB** as the database for storing product details.  
+
+---
+
+### **How It Works**  
+
+1. **User Submits Product Details**  
+   - The frontend sends a `POST` request to the backend with product data.  
+
+2. **Product Data Validation**  
+   - The backend checks if **required fields are provided** and validates their data types.  
+   - If any field is missing or invalid, an error is returned.  
+
+3. **Store Product in MongoDB**  
+   - If validation passes, the product is **saved in MongoDB** using Mongoose.  
+   - A **success response** is sent back to the frontend.  
+
+---
+
+
+---
+
+### **POST API Endpoint for Adding Products**  
+
+📌 **Route:** `/api/v1/product/create-product`  
+📌 **Method:** `POST`  
+
+
+---
+
+
 
