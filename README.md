@@ -359,5 +359,45 @@ In this milestone, we implemented a **Mongoose schema** for products and created
 
 ---
 
+Here is your **`README.md`** for **Milestone 11** in the same structured format as before:  
+
+---
+
+# **Milestone 11: Dynamic Product Display 🛒**  
+
+### **Overview**  
+In this milestone, we made our **Home Page dynamic** by fetching product data from MongoDB. We created an endpoint in the backend to retrieve all products and updated the frontend to display them dynamically.  
+
+### **Features Implemented**  
+
+1. **Backend API for Fetching Products**:  
+   - Created an endpoint **`/api/v1/product/get-products`** to send all stored products from MongoDB to the frontend.  
+
+2. **Fetching Products in Frontend**:  
+   - Used **`fetch`** inside `useEffect` to request product data from the backend when the page loads.  
+   - Stored the fetched data in the **state (`useState`)** and updated the UI dynamically.  
+
+3. **Product Card Display**:  
+   - Passed the fetched products to the **`ProductCard`** component.  
+   - Displayed all products in a grid format dynamically.  
+
+4. **Error Handling & Loading State**:  
+   - **Handled errors** in case of failed API requests.  
+   - **Added a loading state** to improve user experience.  
+
+### **Technologies Used**  
+- **Node.js & Express.js** for backend API.  
+- **MongoDB & Mongoose** to store and retrieve product data.  
+- **React.js** for frontend dynamic rendering.  
+
+### **How It Works**  
+1. **Backend**:  
+   - The API endpoint `GET /api/v1/product/get-products` retrieves all product data from MongoDB.  
+2. **Frontend**:  
+   - `useEffect` triggers a `fetch` request to the backend.  
+   - The fetched product list is stored in **state (`useState`)** and displayed dynamically.  
+3. **Dynamic Rendering**:  
+   - The product data is mapped into `ProductCard` components inside a grid layout.  
+
 
 
