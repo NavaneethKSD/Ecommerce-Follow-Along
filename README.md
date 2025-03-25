@@ -81,7 +81,7 @@ In this milestone, I worked on setting up the backend for the e-commerce project
 - **Nodemon:** To automatically restart the server when I make changes.  
 - **Dotenv:** To keep important data like the database link safe in a `.env` file.  
 
-### Updates to the Repository  
+### Updates to Repository  
 
 - The backend now has:  
   - A proper folder structure.  
@@ -89,8 +89,6 @@ In this milestone, I worked on setting up the backend for the e-commerce project
   - A connection to MongoDB.  
   - Basic error-handling middleware.  
 
-
----
 
 # Milestone 4: User Management and File Upload Integration
 
@@ -398,6 +396,5 @@ In this milestone, we made our **Home Page dynamic** by fetching product data fr
    - The fetched product list is stored in **state (`useState`)** and displayed dynamically.  
 3. **Dynamic Rendering**:  
    - The product data is mapped into `ProductCard` components inside a grid layout.  
-
 
 
