@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 
 const SignUpPage = () => {
   const [formData, setFormData] = useState({
@@ -13,7 +14,7 @@ const SignUpPage = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const validationErrors = {};
@@ -26,7 +27,15 @@ const SignUpPage = () => {
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
     } else {
-      console.log("Form Submitted:", formData);
+      try {
+        console.log("Submitting Signup Form:", formData); // Debugging
+        const response = await axios.post("http://localhost:8000/api/user/create-user", formData);
+        console.log(response.data);
+      } catch (error) {
+        console.error("Error creating user:", error.response.data);
+      }
+      
+      // await axios.post("http://localhost:8000/api/user/create-user", formData)
       // Here, you can make an API call to register the user.
     }
   };

@@ -22,6 +22,24 @@ const createProduct = catchAsyncErrors(async (req, res, next) => {
         message: "Product added successfully",
         product,
     });
+
 });
 
-module.exports = { createProduct };
+// Get All Products by User Email
+const getProductsByUserEmail = catchAsyncErrors(async (req, res, next) => {
+    const { email } = req.params;
+
+    if (!email) {
+        return next(new ErrorHandler("Email is required", 400));
+    }
+
+    const products = await Product.find({ userEmail: email });
+
+    res.status(200).json({
+        success: true,
+        products,
+    });
+
+});
+
+module.exports = { createProduct, getProductsByUserEmail };

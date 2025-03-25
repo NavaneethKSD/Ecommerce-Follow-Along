@@ -1,6 +1,9 @@
 import React from "react";
 
-const ProductCard = ({ name, image, price }) => {
+const ProductCard = ({ product }) => {
+  const { name, images, price } = product;
+  const image = images.length > 0 ? images[0] : "default_image_url"; // Use a default image if none provided
+
   return (
     <div className="bg-white rounded-lg shadow-md p-4">
       <img src={image} alt={name} className="w-full h-40 object-cover rounded" />

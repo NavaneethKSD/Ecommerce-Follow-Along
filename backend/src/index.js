@@ -1,10 +1,12 @@
 const express = require("express");
 const connectDB = require("../config/db");
 require('dotenv').config();
+const cors = require("cors")
 
 const userRoute = require("../routes/userRoute");
 const productRoute = require("../routes/productRoute");
 const errorMiddleware = require("../middlewares/error");
+
 
 const Product = require("../models/productModel"); // Import Product model
 
@@ -12,14 +14,15 @@ const app = express();
 const PORT = 8000;
 
 app.use(express.json());
+app.use(cors())
 
 // Routes
-app.use("/api/v1/user", userRoute);
-app.use("/api/v1/product", productRoute);
+app.use("/api/user", userRoute);
+app.use("/api/product", productRoute);
 
 
 
-app.get("/api/v1/product/get-products", async (req, res) => {
+app.get("/api/product/get-products", async (req, res) => {
     try {
         const products = await Product.find(); // Fetch all products from MongoDB
         res.status(200).json({

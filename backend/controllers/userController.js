@@ -1,5 +1,6 @@
 const path = require("path");
 const bcrypt = require("bcrypt"); // Added bcrypt
+const jwt = require("jsonwebtoken"); // Added jwt
 const User = require("../models/userModel");
 const { upload } = require("../multer");
 const ErrorHandler = require("../utils/ErrorHandler");
@@ -9,18 +10,18 @@ const catchAsyncErrors = require("../middlewares/catchAsyncErrors");
 const createUser = catchAsyncErrors(async (req, res, next) => {
     const { name, email, password } = req.body;
 
+    console.log("Received Signup Request:", req.body); // Debugging
+
     // Check if user already exists
     const userEmail = await User.findOne({ email });
     if (userEmail) {
+        console.log("User already exists");
         return next(new ErrorHandler("User already exists", 400));
     }
 
     // Hash Password Before Storing
     const hashedPassword = await bcrypt.hash(password, 10);
     console.log("Hashed Password Before Storing:", hashedPassword); // Debugging
-
-    // const filename = req.file.filename;
-    // const fileUrl = path.join(filename);
 
     const user = await User.create({
         name,
@@ -48,30 +49,39 @@ const loginUser = catchAsyncErrors(async (req, res, next) => {
         return next(new ErrorHandler("Email and password are required", 400));
     }
 
-    // 1. Check if the user exists
     const user = await User.findOne({ email }).select("+password");
     if (!user) {
+        console.log("User does not exist"); // Debugging
         return next(new ErrorHandler("User does not exist", 404));
     }
 
-    console.log("Stored Hashed Password:", user.password); // Debugging
-    console.log("Entered Password:", password); // Debugging
-
-    // 2. Compare Passwords
     const isPasswordMatch = await bcrypt.compare(password, user.password);
-    console.log("Password Match:", isPasswordMatch); // Debugging
-
     if (!isPasswordMatch) {
+        console.log("Invalid email or password"); // Debugging
         return next(new ErrorHandler("Invalid email or password", 401));
     }
 
-    // **Remove password before sending the response**
+    // Generate JWT Token
+    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
+        expiresIn: process.env.JWT_EXPIRES_IN,
+    });
+
+    console.log("Generated JWT Token:", token); // Debugging
+
+    // Remove password before sending the response
     user.password = undefined;
 
-    // 3. Send Response
-    res.status(200).json({
+    // Send Response
+    res.status(200).cookie('authToken', token, {
+        httpOnly: true,
+        secure: false,
+        sameSite: 'lax',
+        path: '/',
+        maxAge: 60 * 1000
+    }).json({
         success: true,
         message: "Login successful",
+        token,
         user
     });
 });
